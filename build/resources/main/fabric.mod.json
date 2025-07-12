@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "hud",
+  "version": "1.0",
+  "name": "master",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/hud/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "fmh.core.hud.client.mainDataGenerator"
+    ],
+    "client": [
+      "fmh.core.hud.client.mainClient"
+    ],
+    "main": [
+      "fmh.core.hud.main"
+    ]
+  },
+  "mixins": [
+    "hud.mixins.json",
+    {
+      "config": "hud.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "fabric": "*",
+    "minecraft": "1.21.5"
+  }
+}
